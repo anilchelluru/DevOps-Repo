@@ -1,0 +1,24 @@
+scp, cut, awk, sed, grep, cron, inodes, how to check open files in linux, soft and hard links, umask and acl , chown and chmod,
+difference btw du and df commands
+anacron command for daily, monthly, hourly schedule jobs
+free -m , free -h, free -k commands
+diff btw tail and less
+journalctl -u, journalctl -u <service-name> --since <date><time><periods>
+dmesg | grep <service-name> | tail -f
+diff btw tail and less
+lsof
+netstat
+scp
+ssh -A <node-name>, 
+How to create ssh key ? -- ssh-keygen, 
+How to make a tunnel ? -- ssh -<dc-name> -L <localhostport-name>:<nodename><nodeport>
+how to check cpu and memory for a given PID and it's process ? -- ps -p <pid of a process> -o %cpu,%mem
+how to check user process ? -- ps -aux <pid of a process>
+How to check the installed packages ? -- rpm -qa | grep <package-name>
+How to remove install packages ? -- yum remove <package-name>
+find command
+How to find and delete a file with confirmation? -- find ./GFG -name sample.txt -exec rm -i {} \;
+Search for empty files and directories ? -- find ./GFG -empty
+
+
+Refererence - https://www.geeksforgeeks.org/

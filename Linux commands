@@ -24,7 +24,7 @@ to show the hidden files -- ls -la
 How to check the package version name ? -- uname -a
 lvm commands
 iostat -- to see input/output in linux
-filesystem - ex2, ex3, ex4, ntfs
+filesystem - ext2, ext3, ext4, ntfs
 mounting your directories permanent -- /etc/fstab
 tar and unzip commands
 getting system info -- vmstat, cpuinfo, meminfo, lscpu - to check number of cores

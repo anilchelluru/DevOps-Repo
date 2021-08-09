@@ -15,10 +15,29 @@ How to make a tunnel ? -- ssh -<dc-name> -L <localhostport-name>:<nodename><node
 how to check cpu and memory for a given PID and it's process ? -- ps -p <pid of a process> -o %cpu,%mem
 how to check user process ? -- ps -aux <pid of a process>
 How to check the installed packages ? -- rpm -qa | grep <package-name>
-How to remove install packages ? -- yum remove <package-name>
+How to remove install packages ? -- yum remove <package-name> or apt-get purge <package-name>
 find command
 How to find and delete a file with confirmation? -- find ./GFG -name sample.txt -exec rm -i {} \;
 Search for empty files and directories ? -- find ./GFG -empty
+ls -ltrh -- to show the files in sizes
+to show the hidden files -- ls -la
+How to check the package version name ? -- uname -a
+lvm commands
+iostat -- to see input/output in linux
+filesystem - ex2, ex3, ex4, ntfs
+mounting your directories permanent -- /etc/fstab
+tar and unzip commands
+getting system info -- vmstat, cpuinfo, meminfo, lscpu - to check number of cores
+ creates a simple archive of a folder using tar command -- tar -cf ./my-archive.tar ./my-folder/
+  Extract a folder from an archive -- tar -xf archive-name.tar
+  iptables -L -- to check the tables name
+  Display routing table --  ip route show or  route
+  List network interfaces --  ip link show
+  List addresses for interfaces -- ip addr show 
+
+
 
 
 Refererence - https://www.geeksforgeeks.org/
+Reference - tecmint
+

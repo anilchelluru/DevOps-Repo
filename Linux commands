@@ -1,4 +1,26 @@
-scp, cut, awk, sed, grep, cron, inodes, how to check open files in linux, soft and hard links, umask and acl , chown and chmod,
+scp file.txt remote_username@10.10.0.2:/remote/directory
+cut -d "<delimeter>" -f 1 state.txt
+awk '{print $1,$4}' employee.txt ($ means column)
+Replace strings by sed  command in a file -- sed 's/unix/linux/' geekfile.txt
+Replacing string on a specific line number by sed  command in a file -- sed '3 s/unix/linux/' geekfile.txt
+To Delete a particular line using sed command -- sed '5d' filename.txt
+To grep particular nwords from a file -- grep -ir <filename>, grep -e <filename>
+
+crontab -l, crontab -e
+cron jobs schedule and syntax of cron
+-- 1 2 3 4 5 /path/to/command arg1 arg2
+Where,
+1: Minute (0-59)
+2: Hours (0-23)
+3: Day (0-31)
+4: Month (0-12 [12 == December])
+5: Day of the week(0-7 [7 or 0 == sunday])
+/path/to/command – Script or command name to schedule, 
+
+
+What are inodes ? 
+how to check open files in linux -- lsof
+soft and hard links, umask and acl , chown and chmod,
 difference btw du and df commands
 anacron command for daily, monthly, hourly schedule jobs
 free -m , free -h, free -k commands

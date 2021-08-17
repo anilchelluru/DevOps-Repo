@@ -1,0 +1,79 @@
+12) How to integrate two applications by API and it's working, API calls, all types of API's ?
+Reference links :
+https://www.astera.com/type/blog/rest-api-integration/
+https://rapidapi.com/blog/api-glossary/api-integration/
+https://www.mulesoft.com/resources/api/types-of-apis
+https://www.redhat.com/en/topics/api/what-are-application-programming-interfaces
+https://www.altexsoft.com/blog/engineering/what-is-api-definition-types-specifications-documentation/
+
+
+13) How DNS , DHCP and Backend works while typing in web browser ?
+a) Working of DNS ?
+https://phoenixnap.com/kb/what-is-domain-name-system-works
+
+b) Working of DHCP ?
+https://www.thegeekstuff.com/2013/03/dhcp-basics/
+
+c) How backend works while typing in web browser ?
+https://afteracademy.com/blog/what-happens-when-you-type-a-url-in-the-web-browser
+
+
+14) How to Monitor URL and resources ?
+a) URL ?
+
+#!/bin/bash
+while read url
+do
+    urlstatus=$(curl -o /dev/null --silent --head --write-out '%{http_code}' "$url" )
+    echo "$url  $urlstatus" >> urlstatus.txt
+done < $1
+
+b) Resources ?
+
+#!/bin/sh
+df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1 }' | while read output;
+do
+  echo $output
+  usep=$(echo $output | awk '{ print $1}' | cut -d'%' -f1  )
+  partition=$(echo $output | awk '{ print $2 }' )
+  if [ $usep -ge 90 ]; then
+    echo "Running out of space \"$partition ($usep%)\" on $(hostname) as on $(date)" |
+     mail -s "Alert: Almost out of disk space $usep%" you@somewhere.com
+  fi
+done
+
+
+16)  What is a proxy server or forward proxy ?
+A proxy server, sometimes referred to as a forward proxy, is a server that routes traffic between client(s) and another system, usually external to the network. By doing so, it can regulate traffic according to preset policies, convert and mask client IP addresses, enforce security protocols, and block unknown traffic
+
+What is a reverse proxy?
+A reverse proxy is a type of proxy server.  Unlike a traditional proxy server, which is used to protect clients, a reverse proxy is used to protect servers. A reverse proxy is a server that accepts a request from a client, forwards the request to another one of many other servers, and returns the results from the server that actually processed the request to the client as if the proxy server had processed the request itself. The client only communicates directly with the reverse proxy server and it does not know that some other server actually processed its request.
+
+
+17) Rhel resources and boot process, maintenance mode and root password  and INIT levels ?
+a) Rhel resources ? whar are control groups in RHEL ?
+allows you to allocate resources — such as CPU time, system memory, network bandwidth, or combinations of these resources
+
+b) Boot process in linux ?
+https://www.thegeekstuff.com/2011/02/linux-boot-process/
+
+c) maintenance mode ?
+https://redhatlinux.guru/2018/06/01/pacemaker-enable-maintenance-mode-or-freeze-cluster/
+
+d) root password ?
+https://phoenixnap.com/kb/how-to-change-root-password-linux
+
+e) INIT levels ?
+The standard LINUX kernel supports these seven different runlevels :
+
+0 – System halt i.e the system can be safely powered off with no activity.
+1 – Single user mode.
+2 – Multiple user mode with no NFS(network file system).
+3 – Multiple user mode under the command line interface and not under the graphical user interface.
+4 – User-definable.
+5 – Multiple user mode under GUI (graphical user interface) and this is the standard runlevel for most of the LINUX based systems.
+6 – Reboot which is used to restart the system.
+
+
+18) windows boot process ?
+https://neosmart.net/wiki/mbr-boot-process/

@@ -1,0 +1,89 @@
+1. #!/usr/bin/env bash
+
+PASSWD=$?
+
+if [ -f "${PASSWD}" ]; then
+        echo "${PASSWD} is a file"
+else
+        if [ -d "${PASSWD}" ]; then
+                echo "$PASSWD is a directory"
+        else
+                echo "${PASSWD} is invalid"
+        fi
+fi
+
+2. #!/usr/bin/env bash
+
+cat /etc/passwd | awk -F: '{ if ( $3 >=500 )  { print $1 ":" $3} }'
+
+3. #!/usr/bin/env bash
+
+read -p "Enter the user name : " user
+var=`cat /etc/shadow | grep $user | awk -F: '{
+if ( $2 == "*" )
+        print  " is disabled";
+else if ( $2 == "!" )
+        print " has no password";
+else
+        print " is enabled";
+}'`
+echo $var
+
+4. #!/usr/bin/env bash
+
+read -p "Enter the user name : " user
+var=`cat /etc/shadow | grep $user | awk -F: '{print $1 " password : " $2}'`
+echo $var
+
+5. #!/usr/bin/env bash
+
+read -p "Enter the ID of a user : " id
+var1=`cat /etc/passwd | grep $id | awk -F: '{print $1}'`
+var2=`cat /etc/group | grep $var1  | awk -F: '{print $1 " : is group name,  " , $3 " : is GID,  ", $4 " : others are group members }'`
+echo $var1 " : is user name"
+echo $var2
+
+6. #!/usr/bin/env bash
+
+PASSWD=$1
+if [ -x "${PASSWD}" ]; then
+        echo ${PASSWD} " is a world executable file"
+else
+        echo ${PASSWD} " is not a file"
+fi
+
+7. #/usr/bin/env bash
+
+read -p "Enter the interface name : " interface
+var=`ip addr show $interface | grep "inet\b" | awk -F" "  '{print $2}' | cut -d"/" -f1`
+echo $var
+
+8. #!/usr/bin/env bash
+
+target=$1
+
+count=`ping -c 4 $target | grep "ttl" | wc -l`
+if [ $count -eq 0 ]; then
+        echo "IP is not alive"
+else
+        echo "IP is alive"
+fi
+
+9. #!/usr/bin/env bash
+
+read -p "Enter the name of the user : " user
+var=`getent passwd $user`
+if [ $? -eq 0 ]; then
+        echo ""$user" user already exists "
+        exit 1
+elif [ $? -ne 0 ]; then
+        echo ""$user" user not exists"
+else
+        echo "create a user if don't exists"
+fi
+echo $var
+read -p "create a user : " name
+sudo useradd $name
+echo "creating user..."
+sleep 0.5
+echo "user created successfully..."

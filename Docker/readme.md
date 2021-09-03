@@ -40,7 +40,7 @@ Docker COMPOSE:
   case 2: deploy multiple containers from multiple images
              docker-compose -f docker-compose.yml -p webapps up -d --scale web=2 --scale app=2
 
-
+```
 Docker Networking:
 	docker network ls   # list the default & custom networks on a docker host
 		none|host|bridge|overlay|docker_gwbridge
@@ -48,6 +48,7 @@ Docker Networking:
 	docker run -d --net host --name cont1 alpine      # attach a continer to host network
 	docker run -d --net none --name cont2 alpine      # attach a container to none network
 	docker run -d --net ravinet --name cont3 alpine   # attache a container to custom bridge/overlay network
+```
 
 ```
 Docker Swarm

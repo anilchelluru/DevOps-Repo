@@ -71,7 +71,8 @@ Docker Swarm
 	docker service ls      ## list the running services 
 	docker service ps <service name>  ## list the containers running inside a service
 	docker service rm      ## remove the service
-```	
+```
+```
 Docker Services
 
    how to create a service in docker swarm

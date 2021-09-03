@@ -1,5 +1,5 @@
 Docker Cheat Sheet:
-
+```
 Docker Containers
 	docker search  # search the images in docker hub
 	docker pull    # pull image from docker hub
@@ -11,7 +11,8 @@ Docker Containers
 	docker stop|start|restart   # stop/start/restart a container 
 	docker rm / docker rm -f    # remove the containers from the server
 	docker exec    # get inside a running container 
-
+```
+```
 Docker Images 
 	docker images  # list images in local
 	docker commit  ( manual )  # create image from container changes 
@@ -19,7 +20,8 @@ Docker Images
 	docker history # view the layers of an image
 	docker inspect # inspect an image
 	docker rmi     # remove image from local
-
+```
+```
 image repository 
 	docker hub (public)  # docker image reporsitory 
 	docker registry container (private) # docker image repository open source 
@@ -27,19 +29,21 @@ image repository
 		docker login  # login to image repo from commad line
 		docker tag    # create alias name for an image in local
 		docker push   # push images to docker image repository
-
+```
+```
 Docker Volumes
 	docker volume ls   # list volumes in local
 	docker volume create # create a volume 
 	docker inspect volume # inspect the volume
-
+```
+```
 Docker COMPOSE:
 
   case 1: deploy multiple containers from a single image
              docker-compose -f docker-compose.yml up --scale web=4 -d  ; docker-compose down
   case 2: deploy multiple containers from multiple images
              docker-compose -f docker-compose.yml -p webapps up -d --scale web=2 --scale app=2
-
+```
 ```
 Docker Networking:
 	docker network ls   # list the default & custom networks on a docker host

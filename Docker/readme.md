@@ -72,4 +72,21 @@ Docker Swarm
 	docker service ps <service name>  ## list the containers running inside a service
 	docker service rm      ## remove the service
 ```	
-	
+Docker Services
+
+   how to create a service in docker swarm
+
+   docker service create --name mysvc --replicas 4 -p 9080:8080 tomcat
+   docker service ls
+   docker service mysvc ps
+   docker service inspect mysvc
+   docker service inspect --pretty mysvc
+   docker service rm mysvc 
+
+   various options while creating service 
+
+   docker service create --name mysvc --replicas 2 -p 9080:80 -d nginx
+   docker service create --name nginxsvc --replicas 2 --replicas-max-per-node 1 nginx
+   docker service create --name nginxsvc --replicas 3 --mount type=volume,destination=/path/in/container nginx:alpine
+   docker service create --name tomcatsvc --replicas 3 --constraint 'node.labels.type == queue' tomcat
+  ```

@@ -49,6 +49,7 @@ Docker Networking:
 	docker run -d --net none --name cont2 alpine      # attach a container to none network
 	docker run -d --net ravinet --name cont3 alpine   # attache a container to custom bridge/overlay network
 
+```
 Docker Swarm
 
 	docker swarm init   ## initialize the swarm mode (swarm manager)
@@ -65,3 +66,5 @@ Docker Swarm
 	docker service ls      ## list the running services 
 	docker service ps <service name>  ## list the containers running inside a service
 	docker service rm      ## remove the service
+```	
+	

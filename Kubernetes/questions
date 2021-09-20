@@ -67,3 +67,32 @@ spec:
           serviceName: bar
           servicePort: 8080
 ```
+
+
+4) Mark a node as unschedulable
+kubectl cordon <node>
+
+5) Drain a node for maintenance
+kubectl drain <node>
+
+6) Mark a node as schedulable
+kubectl uncordon <node>
+
+7) How to list events ?
+kubectl get events -A
+kubectl get events --sort-by=<JSONPath>
+
+8) Display addresses of the master and services
+kubectl cluster-info
+
+9) Dump cluster state to STDOUT
+kubectl cluster-info dump
+
+10) Dump cluster state to a file
+kubectl cluster-info dump --output-directory=</file/path>
+
+11) List all images running in a cluster
+kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
+
+12) Display the current context
+kubectl config current-context

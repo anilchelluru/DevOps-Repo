@@ -1,0 +1,69 @@
+Config maps & Secrets :
+The major difference is, Secrets store data in base64 format meanwhile ConfigMaps store data in a plain text. If you have some critical data like, keys, passwords, service accounts credentials, db connection string, etc then you should always go for Secrets rather than Configs.
+
+Cluster IP, node port & LB :
+ClusterIP: Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
+
+NodePort: Exposes the service on each Node’s IP at a static port (the NodePort). A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
+
+LoadBalancer: Exposes the service externally using a cloud provider’s load balancer. NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
+
+```
+The YAML for a ClusterIP service looks like this:
+apiVersion: v1
+kind: Service
+metadata:  
+  name: my-internal-service
+spec:
+  selector:    
+    app: my-app
+  type: ClusterIP
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP
+```
+```
+The YAML for a NodePort service looks like this:
+apiVersion: v1
+kind: Service
+metadata:  
+  name: my-nodeport-service
+spec:
+  selector:    
+    app: my-app
+  type: NodePort
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 80
+    nodePort: 30036
+    protocol: TCP
+```
+
+```
+The YAML for a Ingress object on GKE with a L7 HTTP Load Balancer might look like this:
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  backend:
+    serviceName: other
+    servicePort: 8080
+  rules:
+  - host: foo.mydomain.com
+    http:
+      paths:
+      - backend:
+          serviceName: foo
+          servicePort: 8080
+  - host: mydomain.com
+    http:
+      paths:
+      - path: /bar/*
+        backend:
+          serviceName: bar
+          servicePort: 8080
+```

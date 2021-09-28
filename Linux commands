@@ -42,6 +42,7 @@ find command
 How to find and delete a file with confirmation? -- find ./GFG -name sample.txt -exec rm -i {} \;
 Search for empty files and directories ? -- find ./GFG -empty
 $ find ./GFG -perm 664
+# find /path_to_directory -name 'filenamepattern*' -mtime +7 -type f -exec ls {}\;
 ls -ltrh -- to show the files in sizes
 to show the hidden files -- ls -la
 How to check the package version name ? -- uname -a

@@ -42,3 +42,12 @@ Git is a free, open source distributed version control system.
 
 What is the difference between central and distributed version control?
 The main difference between the two classes is that Centralized VCSs keep the history of changes on a central server from which everyone requests the latest version of the work and pushes the latest changes to. ... On the other hand, on a Distributed VCS, everyone has a local copy of the entire work's history
+
+What is git tagging ?
+Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1. 0.1)
+
+What is rebasing ?
+Rebasing is the process of moving or combining a sequence of commits to a new base commit
+
+What is cherry pick in git ?
+Cherry picking is the act of picking a commit from a branch and applying it to another. Git cherry-pick can be useful for undoing changes.

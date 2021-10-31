@@ -30,6 +30,8 @@ on first machine
 
 Step3: create a jenkins job to deploy on to remote machine & use the steps as below
 
+https://www.google.com/search?q=execute+shell+in+jenkins+pipeline&rlz=1C1GCEU_enIN936IN936&sxsrf=AOaemvIiecpCKTyAI8RkEcnY7iszz-iYAg:1635688246421&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiO6I_H5fTzAhW4wjgGHbzYAP4Q_AUoBHoECAEQBg&biw=1349&bih=593&dpr=1#imgrc=2CCbJmBQc21ROM
+
 in jenkins job use build ---- execute shell
 
 ## build tomcat image with application warfile 

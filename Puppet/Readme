@@ -1,3 +1,5 @@
+Puppet uses 8140 port
+
 why do we use puppet
 puppet is configuration management tool that helps system administrators to automate the provisioning configuration and managment of a server infrastructure. puppet enables system administrators and DevOps to work faster and smarter.
 

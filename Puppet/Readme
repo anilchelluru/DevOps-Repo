@@ -1,5 +1,9 @@
 Puppet uses 8140 port
 
+For executing task on remote macines we hot  "puppet agent -t" command on puppet master server
+
+puppet agent -t --noop -> this commmand dont upadte any task on remote servers just refreshes the task what we need to do and gives us the logs on master puppet server.
+
 why do we use puppet
 puppet is configuration management tool that helps system administrators to automate the provisioning configuration and managment of a server infrastructure. puppet enables system administrators and DevOps to work faster and smarter.
 

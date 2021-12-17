@@ -1,0 +1,74 @@
+1 How to check kernel version ?
+  uname -r ; uname -a
+  
+2 How to check directory size ?
+  du
+  
+4 What are Monitoring commands in linux to check performance ?
+  top, vmstat, htop, lsof, tcpdump, netstat, iostat
+  
+5 What are runlevels in linux ?
+  0 – System halt i.e the system can be safely powered off with no activity.
+  1 – Single user mode.
+  2 – Multiple user mode with no NFS(network file system).
+  3 – Multiple user mode under the command line interface and not under the graphical user interface.
+  4 – User-definable.
+  5 – Multiple user mode under GUI (graphical user interface) and this is the standard runlevel for most of the LINUX based systems.
+  6 – Reboot which is used to restart the system.
+
+6 What is the default runlevel in linux and where to find its file and how to switch and how to check ?
+  runlevel 3 or runlevel 5 , in /etc/inittab file , Use the init command to change rune levels: # init 1. , who -r
+ 
+7 How to make soft link ?
+  ln -s {source-filename} {symbolic-filename}
+  
+8 Mysql port number ?
+  3306
+
+9 How to restart apache / tomcat ?
+  service apache2 restart|stop|start
+  
+10 UDP connection examples ?
+  DNS, VOIP, TFTP
+  
+11 Error codes ?
+  403 - The HTTP 403 Forbidden response status code indicates that the server understands the request but refuses to authorize it.
+  404 - The HTTP 404 Not Found response status code indicates that the server cannot find the requested resource.
+  416 - a server cannot serve the requested ranges.
+  500 - Internal Server Error server
+  502 - Bad Gateway server error
+  503 - Service Unavailable
+  
+12 Command to start Jenkins ?
+    systemctl daemon-reload ; systemctl start jenkins
+
+13 What is EC2 in AWS ?
+    an EC2 is a virtual machine that represents a physical server for you to deploy your applications
+ 
+14 What is key-pair in AWS ?
+    A key pair, consisting of a public key and a private key, is a set of security credentials that you use to prove your identity when connecting to an Amazon EC2 instance. Amazon EC2 stores the public key on your instance, and you store the private key. ... When you launch an instance, you are prompted for a key pair.
+
+15 How to check listening ports in linux ?
+    lsof -i -P -n | grep LISTEN ; netstat -tulpn | grep LISTEN ; ss -tulw
+
+16 How to check if apache or tomcat is running or not ?
+    http://server-ip:80 ; systemctl ; ps -elf | grep apache ; 
+
+17 How to check apache configuration for non-root user ?
+    method -1 Add the following configuration to /etc/sudoers file
+    method -2 https://www.tekfik.com/kb/linux/apache/run-apache-httpd-server-from-a-non-root-user-privilege
+    
+18 Default mysql port ?
+    The default MySQL port 3306 is TCP which is used by the mysql client, MySQL Connectors, and utilities such as mysqldump and mysqlpump.
+    
+19 How to delete particular process IDs in Linux ?
+    kill -9 <PID>
+
+20 Types of kill ?
+    SIGHUP (1) - Hangup detected on controlling terminal or death of controlling process. Use SIGHUP to reload configuration files and open/close log files.
+    SIGKILL (9) – Kill signal. Use SIGKILL as a last resort to kill process. It will not save data or cleaning kill the process.
+    SIGTERM (15) – Termination signal. It is the default and safest way to kill process
+
+21 How to check the running process in linux ?
+   ps -aux ; ps -elf
+    

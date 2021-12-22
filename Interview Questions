@@ -99,6 +99,46 @@
     Kibana is a data visualization and exploration tool used for log and time-series analytics, application monitoring.
     https://www.youtube.com/watch?v=gQ1c1uILyKI
     
-29     
+29 How two projects and its services can communiacte each other in GCP ?
+   hared VPC allows an organization to connect resources from multiple projects to a common Virtual Private Cloud (VPC) network, so that they can communicate with each other securely and efficiently using internal IPs from that network. 
+   
+30 GCP peering ?
+    Google Cloud VPC Network Peering allows internal IP address connectivity across two Virtual Private Cloud (VPC) networks regardless of whether they belong to the same project or the same organization.
+
+31 NRPE - (nagios remote plugin agent) - used for doing this is to allow Nagios to monitor "local" resources (like CPU load, memory usage, etc.) on remote machines
+
+32 NRPE port number is 5666
+
+33 difference between git pull and git fetch ?
+    Git fetch fetches the required information only to the local repository. Git pull fetches the required information not only to the local repository but also to the workspace that you are currently working in
     
+34 difference between git pull and git push ?
+    Push - pushing sends the recent commit history from your local repository up to GitHub. ... Pull - a pull grabs any changes from the GitHub repository and merges them into your local repository.
     
+35 difference between git revert and git reset ?
+    Reset - On the commit-level, resetting is a way to move the tip of a branch to a different commit. 
+    Revert - Reverting undoes a commit by creating a new commit
+    
+36 What is git rebase ?
+    Rebasing is the process of moving or combining a sequence of commits to a new base commit
+    
+37 difference between cmd entrypoint and run in dockerfile ?
+    RUN executes command(s) and creates a new image. it is often used for installing software packages. 
+    CMD CMD sets default command and/or parameters, which can be overwritten from command line when docker container runs
+    ENTRYPOINT configures a container that will run as an executable
+    
+38 what is docker registry ?
+    A registry is a storage and content delivery system, holding named Docker images, available in different tagged versions
+    
+39 difference between vm and docker/containers ?
+    Docker is container based technology and containers are just user space of the operating system
+    VM are made up of user space plus kernel space of an operating system
+    
+40 what is jenkins shared library ?
+    A shared library is a collection of independent Groovy scripts which you pull into your Jenkinsfile at runtime
+    
+41 how to check running containers ?
+    docker ps -a
+    
+42 How to write jenkins file ?
+    https://github.com/educomp24/DevOps-Repo/blob/master/Jenkins/Jenkins%20file

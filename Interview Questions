@@ -86,12 +86,7 @@
     https://www.simplilearn.com/tutorials/jenkins-tutorial/ci-cd-pipeline
     https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins
     https://www.youtube.com/watch?v=m0a2CzgLNsc
-    https://www.youtube.com/watch?v=dDFv5cSyHNs
-    https://medium.com/avmconsulting-blog/automated-ci-cd-with-jenkins-39b21c7c8035
-    https://www.jenkins.io/solutions/pipeline/
-    https://towardsdatascience.com/create-your-first-ci-cd-pipeline-with-jenkins-and-github-6aefe21c9240
-    https://www.guru99.com/ci-cd-pipeline.html
-    https://www.perforce.com/blog/vcs/ci-cd-pipelines-jenkins
+    https://www.youtube.com/watch?v=dDFv5cSyH
 
 26 Which deployment tool did you use in DevOps ?
     Jenkins, Maven, Ansible, puppet, Docker

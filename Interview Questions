@@ -40,7 +40,7 @@
   503 - Service Unavailable
   
 12 Command to start Jenkins ?
-    systemctl daemon-reload ; systemctl start jenkins
+    java -jar ./jenkins.war under its directory ; systemctl daemon-reload ; systemctl start jenkins
 
 13 What is EC2 in AWS ?
     an EC2 is a virtual machine that represents a physical server for you to deploy your applications

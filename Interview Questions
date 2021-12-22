@@ -71,4 +71,39 @@
 
 21 How to check the running process in linux ?
    ps -aux ; ps -elf
+   
+22 Nagios works on which port number by default?
+    80
+    
+23 What does APM in new relic ? What is the use of that?
+   APM have real-time and trending data about performance for your web apps and processes. APM supports apps for several programming languages, including Go, Java, .NET, Node.js, PHP, Python, and Ruby, as well as a C SDK.
+   https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/
+   https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/diagnostics-cli-nrdiag/diagnostics-cli-nrdiag/
+24 What does docker file do?
+    A Dockerfile is simply a text-based script of instructions that is used to create a container image.
+
+25 How did you setup CI-CD pipelines using jenkins?
+    https://www.simplilearn.com/tutorials/jenkins-tutorial/ci-cd-pipeline
+    https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins
+    https://www.youtube.com/watch?v=m0a2CzgLNsc
+    https://www.youtube.com/watch?v=dDFv5cSyHNs
+    https://medium.com/avmconsulting-blog/automated-ci-cd-with-jenkins-39b21c7c8035
+    https://www.jenkins.io/solutions/pipeline/
+    https://towardsdatascience.com/create-your-first-ci-cd-pipeline-with-jenkins-and-github-6aefe21c9240
+    https://www.guru99.com/ci-cd-pipeline.html
+    https://www.perforce.com/blog/vcs/ci-cd-pipelines-jenkins
+
+26 Which deployment tool did you use in DevOps ?
+    Git, Jenkins, Maven, Ansible, puppet, Docker, Terraform
+    
+27 How to setup Grafana in real-time in devops projects ?
+    https://www.youtube.com/watch?v=w-c3KYKQQfs
+    https://medium.com/nerd-for-tech/real-time-monitoring-using-prometheus-grafana-ca2ff2d6be03
+    
+28 How does Kibana works and setup?
+    Kibana is a data visualization and exploration tool used for log and time-series analytics, application monitoring.
+    https://www.youtube.com/watch?v=gQ1c1uILyKI
+    
+29     
+    
     

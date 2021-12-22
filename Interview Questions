@@ -94,7 +94,7 @@
     https://www.perforce.com/blog/vcs/ci-cd-pipelines-jenkins
 
 26 Which deployment tool did you use in DevOps ?
-    Git, Jenkins, Maven, Ansible, puppet, Docker, Terraform
+    Jenkins, Maven, Ansible, puppet, Docker
     
 27 How to setup Grafana in real-time in devops projects ?
     https://www.youtube.com/watch?v=w-c3KYKQQfs

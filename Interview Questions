@@ -158,7 +158,13 @@
     
 46 What are the types of load balancers in GCP?
     External load balancers distribute traffic coming from the internet to your Google Cloud Virtual Private Cloud (VPC) network. ...
-    Internal load balancers distribute traffic to instances inside of Google Cloud
+    Internal load balancers distribute traffic to instances inside of Google Cloud.
+    Internal HTTP(S) Load Balancing.
+External HTTP(S) Load Balancing.
+Internal TCP/UDP Load Balancing.
+External TCP/UDP Network Load Balancing.
+External SSL Proxy Load Balancing.
+External TCP Proxy Load Balancing
     
 47 If you have 10 compute-engines how will you connect them?
     Connect to the source instance using the gcloud command-line tool: 

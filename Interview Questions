@@ -147,4 +147,25 @@
 42 How to write jenkins file ?
     https://github.com/educomp24/DevOps-Repo/blob/master/Jenkins/Jenkins%20file
     
-43 How many types of groups in GCP ?    
+43 What are groups in GCP?    
+    Google groups can help you manage users at scale. Each member of a Google group inherits the Identity and Access Management (IAM) roles granted to that group. This inheritance means that you can use a group's membership to manage users' roles instead of granting IAM roles to individual users
+    
+44 What are the two types of IAM roles on GCP?
+    These roles are concentric; that is, the Owner role includes the permissions in the Editor role, and the Editor role includes the permissions in the Viewer role.
+    
+45 Terraform commands?
+    https://acloudguru.com/blog/engineering/the-ultimate-terraform-cheatsheet
+    
+46 What are the types of load balancers in GCP?
+    External load balancers distribute traffic coming from the internet to your Google Cloud Virtual Private Cloud (VPC) network. ...
+    Internal load balancers distribute traffic to instances inside of Google Cloud
+    
+47 If you have 10 compute-engines how will you connect them?
+    Connect to the source instance using the gcloud command-line tool: 
+    gcloud compute ssh --ssh-flag="-A" --ssh-key-file=~/.ssh/id_rsa username@hostname --zone <zonename> --tunnel-through-iap --project <projectname>
+    
+48 what is iap in gcp ?
+  Identity-Aware Proxy (IAP) is a Google Cloud Platform service that intercepts web requests sent to your application, authenticates the user making the request using the Google Identity Service, and only lets the requests through if they come from a user you authorize.
+  
+49 what is --tunnel-through-iap in gcp ?
+    IAP TCP forwarding allows you to establish an encrypted tunnel over which you can forward SSH, RDP, and other traffic to VM instances. IAP TCP forwarding also provides you fine-grained control over which users are allowed to establish tunnels and which VM instances users are allowed to connect to

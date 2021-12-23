@@ -175,3 +175,33 @@ External TCP Proxy Load Balancing
   
 49 what is --tunnel-through-iap in gcp ?
     IAP TCP forwarding allows you to establish an encrypted tunnel over which you can forward SSH, RDP, and other traffic to VM instances. IAP TCP forwarding also provides you fine-grained control over which users are allowed to establish tunnels and which VM instances users are allowed to connect to
+    
+50 what is the use of terraform state file ?
+    Terraform stores information about your infrastructure in a state file. This state file keeps track of resources created by your configuration and maps them to real-world resources.
+    
+51 What happens if you delete Terraform state file?
+    Terraform will search the state for any instances matching the given resource address, and remove the record of each one so that Terraform will no longer be tracking the corresponding remote objects
+    
+52 Is it necessary to have a state file for the Terraform functions to work?
+    Purpose of Terraform State. State is a necessary requirement for Terraform to function. It is often asked if it is possible for Terraform to work without state, or for Terraform to not use state and just inspect cloud resources on every run
+    
+53 When Terraform state file is created?
+    When we build infrastructure with terraform configuration, a state file gets created in the local workspace directory named “terraform. tfstate”. This state file contains information about the provisioned infrastructure which terraform manage
+    
+54 How do I roll back a Terraform state file?
+    There is no way to roll back to a previous state
+    
+55 Can I delete terraform state file?
+    The terraform state rm command
+    
+56 How to update terrafomr state file ?
+    -refresh-only option
+    
+57 How do I use Tfswitch?
+    You can switch between different versions of terraform
+    
+58 How do I delete a resource from terraform state?
+    you need to remove the resource from the state file by running terraform state rm <resource-id>, and then you need to delete the associated configuration from your codebase. After that, you can run init, plan command and you will see no changes are required.
+    
+59 How do I clear Terraform cache?
+    Remove local cache by running rm -rf . terraform 

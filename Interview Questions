@@ -86,23 +86,16 @@
     https://www.simplilearn.com/tutorials/jenkins-tutorial/ci-cd-pipeline
     https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins
     https://www.youtube.com/watch?v=m0a2CzgLNsc
-    https://www.youtube.com/watch?v=dDFv5cSyH
 
 26 Which deployment tool did you use in DevOps ?
     Jenkins, Maven, Ansible, puppet, Docker
     
 27 How to setup Grafana in real-time in devops projects ?
     https://grafana.com/tutorials/
-    https://www.youtube.com/watch?v=w-c3KYKQQfs
-    https://www.youtube.com/watch?v=CjABEnRg9NI
-    https://www.youtube.com/watch?v=9DqOMZrc4PA
-    https://www.youtube.com/watch?v=W7vBXMvpULo
-    https://medium.com/nerd-for-tech/real-time-monitoring-using-prometheus-grafana-ca2ff2d6be03
-    
-28 How does Kibana works and setup?
+        
+28 What is kibana?
     Kibana is a data visualization and exploration tool used for log and time-series analytics, application monitoring.
-    https://www.youtube.com/watch?v=gQ1c1uILyKI
-    
+        
 29 How two projects and its services can communiacte each other in GCP ?
    Shared VPC allows an organization to connect resources from multiple projects to a common Virtual Private Cloud (VPC) network, so that they can communicate with each other securely and efficiently using internal IPs from that network. 
    

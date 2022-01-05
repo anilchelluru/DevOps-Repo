@@ -198,3 +198,17 @@ External TCP Proxy Load Balancing
     
 59 How do I clear Terraform cache?
     Remove local cache by running rm -rf . terraform 
+    
+60 Linux - Inodes, disk usage, scp, boot process, journalctl, dmesg, reboot, core linux
+
+61 Ansible - Roles, modules, ad-hoc commands, playbook, questions related to Ansible
+
+62 Puppet - Architecture, port, working model, commands
+
+63 Kubernets - Architecture, how to check logs, deployments, stateful, scale replicas, autoscaling
+
+64 Terraform - commands, modules, statefiles
+
+65 Jenkins basics, new relic , grafana, kibana
+
+66 zero downtime deployment ?

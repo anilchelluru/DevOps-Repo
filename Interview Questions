@@ -212,3 +212,5 @@ External TCP Proxy Load Balancing
 65 Jenkins basics, new relic , grafana, kibana
 
 66 zero downtime deployment ?
+
+67 GCP basics, autoscaling, load balancers, haproxy basics

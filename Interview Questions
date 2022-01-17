@@ -214,3 +214,7 @@ External TCP Proxy Load Balancing
 66 zero downtime deployment ?
 
 67 GCP basics, autoscaling, load balancers, haproxy basics
+
+68 Kubernetes taints and tolerations
+
+69 you found that the server went down, what you will do ?

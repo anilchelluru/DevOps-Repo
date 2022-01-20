@@ -96,3 +96,13 @@ kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
 
 12) Display the current context
 kubectl config current-context
+
+13) Kubelet -Kubelet on the other hand is a process that runs on each node of a Kubernetes cluster and creates, destroys, or update pods and their Docker containers for the given node when instructed to do so
+the required container(s). Kubelet works with the controller node to organize the container according to its associated pod.
+
+14) kubectl - Kubectl is the CLI tool that developers use for interacting with a Kubernetes cluster
+
+15)  kubeadm -kubeadm: the command to bootstrap the cluster.
+
+16) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluste.
+kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster

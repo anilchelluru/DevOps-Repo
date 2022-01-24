@@ -218,3 +218,6 @@ External TCP Proxy Load Balancing
 68 Kubernetes taints and tolerations
 
 69 you found that the server went down, what you will do ?
+
+70 How To Configure a Linux Service to Start Automatically After a Crash or Reboot ?
+https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-1-practical-examples#:~:text=To%20make%20a%20service%20restart,sh%20%2Fusr%2Fbin%2Fservice_name

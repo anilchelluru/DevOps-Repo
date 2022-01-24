@@ -221,3 +221,7 @@ External TCP Proxy Load Balancing
 
 70 How To Configure a Linux Service to Start Automatically After a Crash or Reboot ?
 https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-1-practical-examples#:~:text=To%20make%20a%20service%20restart,sh%20%2Fusr%2Fbin%2Fservice_name
+
+71 shebang #!/bin/bash or insteado of bash we can use (sh, tcsh) -- the absolute path to the Bash interpreter.
+
+72 top and htop for process manager and utilization of resources and its commands.

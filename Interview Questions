@@ -70,7 +70,7 @@
     SIGTERM (15) – Termination signal. It is the default and safest way to kill process
 
 21 How to check the running process in linux ?
-   ps -aux ; ps -elf
+   ps -elf
    
 22 Nagios works on which port number by default?
     80

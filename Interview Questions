@@ -234,3 +234,18 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-servic
       
 75 Background and foreground jobs ?
     https://www.thegeekstuff.com/2010/05/unix-background-job/
+    
+76 what is screen command ?
+    Screen command is used for long running scripts in separate terminal.
+    
+77 how to list how many screen sessions are currenlty there in our terminal ?
+    screen -ls
+ 
+78 how to create a screen with a name ?
+    screen -S <name>
+    
+79 how to re enter to the screen session is already created before ?
+    screen -R <name>
+
+80 how to come out of the screen ?
+    ctrl + a + D

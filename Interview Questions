@@ -236,7 +236,7 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-servic
     https://www.thegeekstuff.com/2010/05/unix-background-job/
     
 76 what is screen command ?
-    Screen command is used for long running scripts in separate terminal.
+    Screen command is used for long running scripts in separate terminal and we can create multiple screens.
     
 77 how to list how many screen sessions are currenlty there in our terminal ?
     screen -ls

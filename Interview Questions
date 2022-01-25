@@ -225,3 +225,12 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-servic
 71 shebang #!/bin/bash or insteado of bash we can use (sh, tcsh) -- the absolute path to the Bash interpreter.
 
 72 top and htop for process manager and utilization of resources and its commands.
+
+73 Shell script parameters ?
+    https://www.javatpoint.com/shell-script-parameters
+    
+74 how-to-redirect-standard-error-in-bash ?
+      https://www.cyberciti.biz/faq/how-to-redirect-standard-error-in-bash/
+      
+75 Background and foreground jobs ?
+    https://www.thegeekstuff.com/2010/05/unix-background-job/

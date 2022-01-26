@@ -132,9 +132,10 @@ ab -n 500000 -c 1000 http://10.97.161.152/
 -n requests Number of requests to perform
 -c concurrency Number of multiple requests to make at a time
 
-29) INGRESS
-An API object that manages external access to the services in a cluster, typically HTTP, Ingress can also provide load balancing, SSL termination and name-based virtual hosting
-Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource
+29) INGRESS & EGRESS
+Ingress can also provide load balancing, SSL termination.
+Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster.
+ingress is incoming traffic to the pod, and egress is outgoing traffic from the pod.
 
 30) kubernetes conf file - $HOME/.kube/config
 

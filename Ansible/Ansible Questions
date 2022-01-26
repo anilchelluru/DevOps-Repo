@@ -1,6 +1,6 @@
-Things to know before working with ansible
+shiva Things to know before working with ansible
 
-	1) ansible is agentless ( means, we do not need to run any agent on remote servers for communication )
+	1) ansible is agentless
 
 	2) ansible follows push model ( means we push the configuration from ansible controller to remote servers )
 
@@ -11,16 +11,14 @@ Things to know before working with ansible
 			password based
 			key based
 
-Ansible controller ( is the machine/host/server where we install ansible ) 
+	/etc/ansible default directory 
 
-	/etc/ansible default directory ( we have two important file in it )
+	hosts ( default inventory file in which we can mention remote servers we want to apply/push the changes to)
 
-		hosts ( default inventory file in which we can mention remote servers we want to apply/push the changes to)
-
-		ansible.cfg  ( default ansible configuraton - can be used to customize as per our need )
+	ansible.cfg  ( default ansible configuraton - can be used to customize as per our need )
 
 
-Ansible Terminlogy 
+shiva Ansible Terminlogy 
 
 	1) ansible ad-hoc commands ( single task that can be executed against remote servers )
 
@@ -32,7 +30,7 @@ Ansible Terminlogy
 
 	5) ansible role ( to break a playbook into multiple files. This simplifies writing complex playbooks, and it makes them easier to reuse )
 
-
+shiva some definitions below:
   What is Ansible galaxy ?
   Ansible Galaxy is a repository for Ansible Roles that are available to drop directly into your Playbooks to streamline your automation projects
 

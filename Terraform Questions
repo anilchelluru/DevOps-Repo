@@ -78,3 +78,12 @@ tags {
     
 59 How do I clear Terraform cache?
     Remove local cache by running rm -rf . terraform
+    
+- How to lock Terraform module versions?
+A proven way of locking Terraform module version is using the Terraform module registry as a source. We can use the ‘version’ attribute in module of the Terraform configuration file
+
+- What are modules in Terraform?
+The root module includes resources mentioned in the .tf files and is required for every Terraform.
+
+- What is a Private Module Registry?
+A Private Module Registry is a feature from Terraform Cloud that allows you to share Terraform modules across the organization

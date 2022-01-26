@@ -1,4 +1,5 @@
-KUBERNETES ARCHITECTURE HIERARACHY ---- 
+----- KUBERNETES ARCHITECTURE HIERARACHY ---- 
+
 There is a kubernetes cluster,
 In each cluster, there are many nodes
 In each nodes, there are many pods,

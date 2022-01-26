@@ -146,57 +146,7 @@
 44 What are the two types of IAM roles on GCP?
     These roles are concentric; that is, the Owner role includes the permissions in the Editor role, and the Editor role includes the permissions in the Viewer role.
     
-45 Terraform commands?
-    https://acloudguru.com/blog/engineering/the-ultimate-terraform-cheatsheet
-    
-```
-Some of the most useful Terraform commands are:
-
-terraform init - initializes the current directory
-terraform refresh - refreshes the state file
-terraform output - views Terraform outputs
-terraform apply - applies the Terraform code and builds stuff
-terraform destroy - destroys what has been built by Terraform
-terraform graph - creates a DOT-formatted graph
-terraform plan - a dry run to see what Terraform will do
-terraform validate - validate code for syntax
-terraform fmt - format code
-terraform terraform apply --auto-approve - apply changes without being prompted to enter “yes”
-terraform destroy --auto-approve - destroy/cleanup deployment without being prompted for “yes”
-terraform apply -lock=true - lock the state file so it can’t be modified by any other Terraform apply
-terraform refresh - reconcile the state in Terraform state file with real-world resources
-terraform providers - get information about providers used in current configuration
-terraform workspace list - list out all workspaces
-terraform state list - list out all the resources tracked via the current state file
-terraform version - display Terraform binary version, also warns if version is old
-terraform get -update=true - download and update modules in the “root” module
-terraform taint aws_instance.my_ec2 - taints resource to be recreated on next apply
-terraform untaint aws_instance.my_ec2 - Remove taint from a resource
-terraform show - he show command shows the current state of a saved plan
-```
-
-Give the terraform configuration for creating a single EC2 instance on AWS.
-This is the Terraform configuration for creating a single EC2 instance on AWS:
-
-provider “aws” {
-
-region = “”}
-
-resource “aws_instance”
-
-“example” {
-
-ami = ""
-
-instance_type = ""
-
-tags {
-
- Name = "example"}
- 
- The terraform taint command informs Terraform that a particular object has become degraded or damaged. Terraform represents this by marking the object as "tainted" in the Terraform state, and Terraform will propose to replace it in the next plan you create
- Terraform untaint Manually unmark a resource as tainted, restoring it as the primary instance in the state. This reverses either a manual 'terraform taint' or the result of provisioners failing on a resource. ... This command changes your state to unmark a resource as tainted.
-    
+   
 46 What are the types of load balancers in GCP?
     External load balancers distribute traffic coming from the internet to your Google Cloud Virtual Private Cloud (VPC) network. ...
     Internal load balancers distribute traffic to instances inside of Google Cloud.
@@ -215,37 +165,7 @@ External TCP Proxy Load Balancing
   Identity-Aware Proxy (IAP) is a Google Cloud Platform service that intercepts web requests sent to your application, authenticates the user making the request using the Google Identity Service, and only lets the requests through if they come from a user you authorize.
   
 49 what is --tunnel-through-iap in gcp ?
-    IAP TCP forwarding allows you to establish an encrypted tunnel over which you can forward SSH, RDP, and other traffic to VM instances. IAP TCP forwarding also provides you fine-grained control over which users are allowed to establish tunnels and which VM instances users are allowed to connect to
-    
-50 what is the use of terraform state file ?
-    Terraform stores information about your infrastructure in a state file. This state file keeps track of resources created by your configuration and maps them to real-world resources.
-    
-51 What happens if you delete Terraform state file?
-    Terraform will search the state for any instances matching the given resource address, and remove the record of each one so that Terraform will no longer be tracking the corresponding remote objects
-    
-52 Is it necessary to have a state file for the Terraform functions to work?
-    Purpose of Terraform State. State is a necessary requirement for Terraform to function. It is often asked if it is possible for Terraform to work without state, or for Terraform to not use state and just inspect cloud resources on every run
-    
-53 When Terraform state file is created?
-    When we build infrastructure with terraform configuration, a state file gets created in the local workspace directory named “terraform. tfstate”. This state file contains information about the provisioned infrastructure which terraform manage
-    
-54 How do I roll back a Terraform state file?
-    There is no way to roll back to a previous state
-    
-55 Can I delete terraform state file?
-    The terraform state rm command
-    
-56 How to update terrafomr state file ?
-    -refresh-only option
-    
-57 How do I use Tfswitch?
-    You can switch between different versions of terraform
-    
-58 How do I delete a resource from terraform state?
-    you need to remove the resource from the state file by running terraform state rm <resource-id>, and then you need to delete the associated configuration from your codebase. After that, you can run init, plan command and you will see no changes are required.
-    
-59 How do I clear Terraform cache?
-    Remove local cache by running rm -rf . terraform 
+    IAP TCP forwarding allows you to establish an encrypted tunnel over which you can forward SSH, RDP, and other traffic to VM instances. IAP TCP forwarding also provides you fine-grained control over which users are allowed to establish tunnels and which VM instances users are allowed to connect to 
     
 60 Linux - Inodes, disk usage, scp, boot process, journalctl, dmesg, reboot, core linux
 

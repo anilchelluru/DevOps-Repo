@@ -298,3 +298,6 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-servic
 
 80 how to come out of the screen ?
     ctrl + a + D
+    
+81 How to check which process is utilizing how much of memory, cpu and from which command it is running ?
+   ps -p <PID> -o %mem,%cpu,cmd

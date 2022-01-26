@@ -167,3 +167,5 @@ Kubernetes autoscaling helps optimize resource usage and costs by automatically 
 38) what is hpa and vpa in kubernetes
 Horizontal Pod Autoscaler ( HPA ) allocates pod replicas
 Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory for your Pods.
+
+IMP - Kubernetes troubleshooting issues in blog - https://kubernetes.io/blog/2019/03/29/kube-proxy-subtleties-debugging-an-intermittent-connection-reset/

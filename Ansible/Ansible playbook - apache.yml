@@ -1,8 +1,8 @@
+shiva
 ---
 - hosts: all
   become: yes
   tasks:
-#### conditons
     - name: install a webserver redhat/centos
       yum:
         name: httpd

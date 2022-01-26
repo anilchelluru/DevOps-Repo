@@ -31,7 +31,8 @@ Set JAVA_HOME & MAVEN_HOME as environment variables on Jenkins machine
 	
 	
 	
-	Questions Asked :
+shiva Questions Asked :
 	
 	Jenkins installation path : /var/lib/jenkins
 	Maven installation path : /opt/apache-maven-3.6.3
+	"JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64

@@ -80,3 +80,6 @@ chkconfig --level 2345 [name of the tomcat init script] on
 12 check if the puppet service is working properly
 13 check the last puppet runs file in /var/lib/puppet/state/last_puppet_run.yml and last_report_summary.yml
 14 ConnectionRefusedError and ava.net.SocketTimeoutException
+
+- How to check which specific process is utilizing how much of memory, cpu and from which command it is running ?
+   ps -p <PID> -o %mem,%cpu,cmd

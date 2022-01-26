@@ -129,5 +129,6 @@ Pod affinity/anti-affinity allows you to constrain which nodes your pod is eligi
 20) what is cordon and uncordon ?
 Cordon will mark the node as unschedulable. Uncordon will mark the node as schedulable
 
-
+21) what is namespace in kubernets cluster?
+A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster
 

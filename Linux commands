@@ -58,6 +58,15 @@ getting system info -- vmstat, cpuinfo, meminfo, lscpu - to check number of core
   Display routing table --  ip route show or  route
   List network interfaces --  ip link show
   List addresses for interfaces -- ip addr show 
+  
+  - what is swap memory in linux ?
+  Swap space in Linux is used when the amount of physical memory (RAM) is full  /proc/swaps
+  command to check: swapon -s
+  
+  - resize2fs command -  it is used to resize the partition /dev/sda
+  - growpart command - growpart is a Linux command-line tool used to extend a partition in a partition table to fill available space. /dev/sda
+  - xfs_growfs command  - used to increase the size of a mounted XFS file system /dev/sda
+  
 
 
 

@@ -172,6 +172,7 @@ terraform version - display Terraform binary version, also warns if version is o
 terraform get -update=true - download and update modules in the “root” module
 terraform taint aws_instance.my_ec2 - taints resource to be recreated on next apply
 terraform untaint aws_instance.my_ec2 - Remove taint from a resource
+terraform show - he show command shows the current state of a saved plan
 ```
 
 Give the terraform configuration for creating a single EC2 instance on AWS.
@@ -192,6 +193,9 @@ instance_type = ""
 tags {
 
  Name = "example"}
+ 
+ The terraform taint command informs Terraform that a particular object has become degraded or damaged. Terraform represents this by marking the object as "tainted" in the Terraform state, and Terraform will propose to replace it in the next plan you create
+ Terraform untaint Manually unmark a resource as tainted, restoring it as the primary instance in the state. This reverses either a manual 'terraform taint' or the result of provisioners failing on a resource. ... This command changes your state to unmark a resource as tainted.
     
 46 What are the types of load balancers in GCP?
     External load balancers distribute traffic coming from the internet to your Google Cloud Virtual Private Cloud (VPC) network. ...

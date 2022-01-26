@@ -86,3 +86,54 @@ Cordon will mark the node as unschedulable. Uncordon will mark the node as sched
 26) what is namespace in kubernets cluster?
 A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster
 
+27) Kubernetes commands :
+
+kubectl get pods                               # list all running pods in current active namespace
+kubectl get pods -n kube-system                # list all running pods in specified namespace
+kubectl get pods --all-namespaces               # list all running pods in all namespaces available
+kubectl get pods -o wide                        # list all running pods in current active namespace wider output
+kubectl describe pod <podname>                  # detailed output about a pod in current namespace
+kubectl describe pod <podname> -n namespace     # detailed output about a pod in current namespace
+kubectl exec -it my-pod -- /bin/bash            # get interactive shell of the container in existing pod ( 1 container case )
+kubectl exec -it my-pod -c my-container -- /bin/bash      # get interative shell of the container in existing pod ( multi container)
+kubectl delete pods <podname>                    # delete a pod in current active namespace
+kubectl expose pod nginx --port=80 --target-port=80        # expose pod as service within the cluster
+kubectl expose pod nginx --target-port=80 --type=NodePort     # expose pod as service within the cluster & outside of the cluster
+kubectl get rs                              # List all replica sets in current active namespace
+kubectl get rs -n <namespace>               # List the replica sets in <namespace>
+kubectl describe rs <rsname>                # inspect the replica set
+kubectl scale --replicas=x rs <rsname>      # Scale up/down replica set
+kubectl expose rs <rsname> --port=<external> --target-port=<internal>          # expose rs as service & assign port on the cluster
+kubectl expose rs <rsname> --port=<external> --type=NodePort                # expose rs as service & assign port on the Node
+kubectl delete rs <rsname>                  # delete rs & pod under it
+kubectl get svc                         # list all running services in current active namespace
+kubectl describe svc <svcname> -n namespace             # detailed output about a service in  namespace
+kubectl delete svc <svcname> -n namespace                    # delete a svc in  namespace
+kubectl create -f deployment-ex1.yml          # create deployment
+kubectl get deploy -n <namespace>               # List the deployments in <namespace>
+kubectl describe deploy <deployment>                # inspect the deployment
+kubectl scale --replicas=x deploy <deployment>      # Scale up/down deployment
+kubectl expose deploy <deploy> --port=<external> --target-port=<internal> # expose deployment as service & assign port on the cluster
+kubectl delete deploy <deployment>                  # delete deployment & pod under it
+kubectl rollout history deploy <deployname>      # check the revisions of a Deployment
+kubectl rollout status deploy <deployname>       # get status of rollout 
+kubectl rollout undo deploy <deployname>         # rollback to the previous revision
+
+
+28) LOAD TEST
+ab -n 500000 -c 1000 http://10.97.161.152/
+-n requests Number of requests to perform
+-c concurrency Number of multiple requests to make at a time
+
+29) INGRESS
+An API object that manages external access to the services in a cluster, typically HTTP, Ingress can also provide load balancing, SSL termination and name-based virtual hosting
+Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource
+
+30) kubernetes conf file - $HOME/.kube/config
+
+31) How to join kubernets master to nodes?
+copy the kubeadm join token from master & run it on all nodes
+kubeadm join <key>
+
+32) suppose, you forgot token then how to recreate or get token from this command ?
+kubeadm token create --print-join-command --ttl=0

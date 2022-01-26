@@ -149,8 +149,7 @@
 45 Terraform commands?
     https://acloudguru.com/blog/engineering/the-ultimate-terraform-cheatsheet
     
-    ```
-    What are the most useful Terraform commands?
+```
 Some of the most useful Terraform commands are:
 
 terraform init - initializes the current directory
@@ -160,7 +159,39 @@ terraform apply - applies the Terraform code and builds stuff
 terraform destroy - destroys what has been built by Terraform
 terraform graph - creates a DOT-formatted graph
 terraform plan - a dry run to see what Terraform will do
+terraform validate - validate code for syntax
+terraform fmt - format code
+terraform terraform apply --auto-approve - apply changes without being prompted to enter “yes”
+terraform destroy --auto-approve - destroy/cleanup deployment without being prompted for “yes”
+terraform apply -lock=true - lock the state file so it can’t be modified by any other Terraform apply
+terraform refresh - reconcile the state in Terraform state file with real-world resources
+terraform providers - get information about providers used in current configuration
+terraform workspace list - list out all workspaces
+terraform state list - list out all the resources tracked via the current state file
+terraform version - display Terraform binary version, also warns if version is old
+terraform get -update=true - download and update modules in the “root” module
+terraform taint aws_instance.my_ec2 - taints resource to be recreated on next apply
+terraform untaint aws_instance.my_ec2 - Remove taint from a resource
 ```
+
+Give the terraform configuration for creating a single EC2 instance on AWS.
+This is the Terraform configuration for creating a single EC2 instance on AWS:
+
+provider “aws” {
+
+region = “”}
+
+resource “aws_instance”
+
+“example” {
+
+ami = ""
+
+instance_type = ""
+
+tags {
+
+ Name = "example"}
     
 46 What are the types of load balancers in GCP?
     External load balancers distribute traffic coming from the internet to your Google Cloud Virtual Private Cloud (VPC) network. ...

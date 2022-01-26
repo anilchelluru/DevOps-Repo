@@ -44,7 +44,6 @@ kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
 Container - A container runs in a pod in a container runtime env
 pods - A group of pods run on a cluster
 
-13) every container in a pod runs on the same node,
 
 14) What is a container vs VM? 
 containers provide a way to virtualize an OS so that multiple workloads can run on a single OS instance. With VMs, the hardware is being virtualized to run multiple OS instances.
@@ -59,26 +58,24 @@ A stateless application is one which depends on no persistent storage
 17) Display the current context
 kubectl config current-context
 
-18) Kubelet -Kubelet on the other hand is a process that runs on each node of a Kubernetes cluster and creates, destroys, or update pods and their Docker containers for the given node when instructed to do so
-the required container(s). Kubelet works with the controller node to organize the container according to its associated pod.
+18) Kubelet -Kubelet runs on each node of a Kubernetes cluster and creates, destroys, or update pods as instructed by kube-controller.
 
 19) kubectl - Kubectl is the CLI tool that developers use for interacting with a Kubernetes cluster
 
 20)  kubeadm -kubeadm: the command to bootstrap the cluster.
 
-21) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluster.
-kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster
+21) Kubeproxy -
+kube-proxy is a network proxy that runs on each node in your cluster.
+kube-proxy maintains network rules on nodes.
 
 22) what is taints and tolerations in kubernetes ?
-Taints are the opposite -- they allow a node to repel a set of pods.
-Tolerations are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints
-Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
+Taints allow repel of nodes from set of pods pods.
+Tolerations are applied to pods, and allow the pods to schedule onto nodes with matching taints
+Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node.
 
 Example to taint a node :
 command - kubectl taint nodes node1 key1=value1:NoSchedule
-
-Meaning of above command - places a taint on node node1. The taint has key key1, value value1, and taint effect NoSchedule. This means that no pod will be able to schedule onto node1 unless it has a matching toleration.
-
+where NOSchedule is a effect
 
 23) What is Scheduling, Preemption and Eviction ?
 In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that the kubelet can run them. Preemption is the process of terminating Pods with lower Priority so that Pods with higher Priority can schedule on Nodes. Eviction is the process of terminating one or more Pods on Nodes
@@ -127,7 +124,8 @@ kubectl rollout status deploy <deployname>       # get status of rollout
 kubectl rollout undo deploy <deployname>         # rollback to the previous revision
 
 
-28) LOAD TEST
+28) If questions comes, how to LOAD TEST on a particular URL's ?
+ab is a tool for load testing.
 ab -n 500000 -c 1000 http://10.97.161.152/
 -n requests Number of requests to perform
 -c concurrency Number of multiple requests to make at a time
@@ -149,7 +147,7 @@ kubeadm token create --print-join-command --ttl=0
 33) what is kubeproxy and where it is connected ?
 it is connected on node.
 Kube-proxy act as a  network proxy and a load balancer. It is responsible for routing traffic to the appropriate container based on IP and port number of the incoming request.
-he kube-proxy on all your Kubernetes nodes runs as a Kubernetes DaemonSet and its configuration is stored on a Kubernetes ConfigMap.
+the kube-proxy on all your Kubernetes nodes runs as a Kubernetes DaemonSet and its configuration is stored on a Kubernetes ConfigMap.
 
 34) What is label and selector in Kubernetes?
 Kubernetes labels are key/value pairs that can be attached to Kubernetes objects.

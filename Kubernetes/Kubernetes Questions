@@ -1,3 +1,9 @@
+KUBERNETES ARCHITECTURE HIERARACHY ---- 
+There is a kubernetes cluster,
+In each cluster, there are many nodes
+In each nodes, there are many pods,
+In each pods (pod is a outer layer of a container), there are one or more containers (container runs in a container runtime within a pod) , if these containers are relatively tightly coupled within a pod.
+
 1) Config maps & Secrets :
 The major difference is, Secrets store data in base64 format meanwhile ConfigMaps store data in a plain text. If you have some critical data like, keys, passwords, service accounts credentials, db connection string, etc then you should always go for Secrets rather than Configs.
 
@@ -59,7 +65,7 @@ the required container(s). Kubelet works with the controller node to organize th
 
 20)  kubeadm -kubeadm: the command to bootstrap the cluster.
 
-21) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluste.
+21) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluster.
 kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster
 
 22) what is taints and tolerations in kubernetes ?
@@ -137,3 +143,26 @@ kubeadm join <key>
 
 32) suppose, you forgot token then how to recreate or get token from this command ?
 kubeadm token create --print-join-command --ttl=0
+
+33) what is kubeproxy and where it is connected ?
+it is connected on node.
+Kube-proxy act as a  network proxy and a load balancer. It is responsible for routing traffic to the appropriate container based on IP and port number of the incoming request.
+he kube-proxy on all your Kubernetes nodes runs as a Kubernetes DaemonSet and its configuration is stored on a Kubernetes ConfigMap.
+
+34) What is label and selector in Kubernetes?
+Kubernetes labels are key/value pairs that can be attached to Kubernetes objects.
+selector allows us to select Kubernetes resources based on the value of labels and resource fields assigned to a group of pods or nodes. 
+
+35) What is node selector in Kubernetes?
+nodeSelector is a field of PodSpec. It specifies a map of key-value pairs
+
+36) What is the link between scaling and Deployments in Kubernetes?
+Scaling out a Deployment will ensure new Pods are created and scheduled to Nodes with available resources. Scaling will increase the number of Pods to the new desired state.
+When you scale an application, you increase or decrease the number of replicas.
+
+37) How does Autoscaling work in Kubernetes?
+Kubernetes autoscaling helps optimize resource usage and costs by automatically scaling a cluster up and down in line with demand." ... When load decreases, Kubernetes can then adjust back to fewer nodes and pods, conserving on resources and spending.”
+
+38) what is hpa and vpa in kubernetes
+Horizontal Pod Autoscaler ( HPA ) allocates pod replicas
+Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory for your Pods.

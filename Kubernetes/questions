@@ -106,3 +106,28 @@ the required container(s). Kubelet works with the controller node to organize th
 
 16) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluste.
 kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster
+
+17) what is taints and tolerations in kubernetes ?
+Taints are the opposite -- they allow a node to repel a set of pods.
+Tolerations are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints
+command - kubectl taint nodes node1
+Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
+
+Example to taint a node :
+command - kubectl taint nodes node1 key1=value1:NoSchedule
+
+Means - places a taint on node node1. The taint has key key1, value value1, and taint effect NoSchedule. This means that no pod will be able to schedule onto node1 unless it has a matching toleration.
+
+
+18) What is Scheduling, Preemption and Eviction ?
+In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that the kubelet can run them. Preemption is the process of terminating Pods with lower Priority so that Pods with higher Priority can schedule on Nodes. Eviction is the process of terminating one or more Pods on Nodes
+
+19) What is node affinity and pod affinity ?
+Node affinity is a set of rules used by the scheduler to determine where a pod can be placed
+Pod affinity/anti-affinity allows you to constrain which nodes your pod is eligible to be scheduled on based on the labels on other pods
+
+20) what is cordon and uncordon ?
+Cordon will mark the node as unschedulable. Uncordon will mark the node as schedulable
+
+
+

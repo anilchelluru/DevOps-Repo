@@ -33,20 +33,36 @@ kubectl cluster-info dump --output-directory=</file/path>
 11) List all images running in a cluster
 kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
 
-12) Display the current context
+12) what is the difference between a pod and a container ?
+Container - A container runs in a pod in a container runtime env
+pods - A group of pods run on a cluster
+
+13) every container in a pod runs on the same node,
+
+14) What is a container vs VM? 
+containers provide a way to virtualize an OS so that multiple workloads can run on a single OS instance. With VMs, the hardware is being virtualized to run multiple OS instances.
+
+15) difference between continuous delivery and continuous deployment ?
+Continuous Delivery means complete delivery of the application to customer; Continuous Deployment includes only deployment of the application in customer environment
+
+16) what is stateful and stateless in kubernetes ?
+Stateful applications save data to persistent disk storage for use by the server
+A stateless application is one which depends on no persistent storage
+
+17) Display the current context
 kubectl config current-context
 
-13) Kubelet -Kubelet on the other hand is a process that runs on each node of a Kubernetes cluster and creates, destroys, or update pods and their Docker containers for the given node when instructed to do so
+18) Kubelet -Kubelet on the other hand is a process that runs on each node of a Kubernetes cluster and creates, destroys, or update pods and their Docker containers for the given node when instructed to do so
 the required container(s). Kubelet works with the controller node to organize the container according to its associated pod.
 
-14) kubectl - Kubectl is the CLI tool that developers use for interacting with a Kubernetes cluster
+19) kubectl - Kubectl is the CLI tool that developers use for interacting with a Kubernetes cluster
 
-15)  kubeadm -kubeadm: the command to bootstrap the cluster.
+20)  kubeadm -kubeadm: the command to bootstrap the cluster.
 
-16) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluste.
+21) Kubeproxy -kube-proxy is a network proxy that runs on each node in your cluste.
 kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster
 
-17) what is taints and tolerations in kubernetes ?
+22) what is taints and tolerations in kubernetes ?
 Taints are the opposite -- they allow a node to repel a set of pods.
 Tolerations are applied to pods, and allow (but do not require) the pods to schedule onto nodes with matching taints
 Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.
@@ -57,16 +73,16 @@ command - kubectl taint nodes node1 key1=value1:NoSchedule
 Meaning of above command - places a taint on node node1. The taint has key key1, value value1, and taint effect NoSchedule. This means that no pod will be able to schedule onto node1 unless it has a matching toleration.
 
 
-18) What is Scheduling, Preemption and Eviction ?
+23) What is Scheduling, Preemption and Eviction ?
 In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that the kubelet can run them. Preemption is the process of terminating Pods with lower Priority so that Pods with higher Priority can schedule on Nodes. Eviction is the process of terminating one or more Pods on Nodes
 
-19) What is node affinity and pod affinity ?
+24) What is node affinity and pod affinity ?
 Node affinity is a set of rules used by the scheduler to determine where a pod can be placed
 Pod affinity/anti-affinity allows you to constrain which nodes your pod is eligible to be scheduled on based on the labels on other pods
 
-20) what is cordon and uncordon ?
+25) what is cordon and uncordon ?
 Cordon will mark the node as unschedulable. Uncordon will mark the node as schedulable
 
-21) what is namespace in kubernets cluster?
+26) what is namespace in kubernets cluster?
 A Kubernetes namespace provides the scope for Pods, Services, and Deployments in the cluster
 
